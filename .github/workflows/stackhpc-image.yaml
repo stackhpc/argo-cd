@@ -1,0 +1,48 @@
+name: Publish release
+
+# Run the tasks on every tag
+on:
+  push:
+    tags: ["**"]
+
+# Publish images to GitHub packages
+env:
+  REGISTRY: ghcr.io/stackhpc
+  TAG: ${{ github.ref_name }}
+  RELEASE_ALIAS_TAG: ${{ github.ref_name }}
+
+jobs:
+  build_push_images:
+    name: Build and push images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Calculate metadata for image
+        id: image-meta
+        uses: docker/metadata-action@v3
+        with:
+          images: ghcr.io/stackhpc/argocd
+          # Produce the branch name or tag and the SHA as tags
+          tags: |
+            type=ref,event=branch
+            type=ref,event=tag
+            type=sha,prefix=
+
+      - name: Build and push image
+        uses: stackhpc/github-actions/docker-multiarch-build-push@master
+        with:
+          cache-key: argocd
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.image-meta.outputs.tags }}
+          labels: ${{ steps.image-meta.outputs.labels }}
