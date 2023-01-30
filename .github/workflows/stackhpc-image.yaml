@@ -1,4 +1,4 @@
-name: Publish release
+name: Publish StackHPC release
 
 # Run the tasks on every tag
 on:
