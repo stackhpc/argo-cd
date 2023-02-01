@@ -295,4 +295,4 @@ replace (
 )
 
 // For now, use our fork of the gitops-engine
-replace github.com/argoproj/gitops-engine => github.com/stackhpc/gitops-engine v0.0.0-20230130171631-92eb90f3ca71
+replace github.com/argoproj/gitops-engine => github.com/stackhpc/gitops-engine v0.0.0-20230201124431-8dd5d6d9739c

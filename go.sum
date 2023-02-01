@@ -1063,8 +1063,8 @@ github.com/spf13/viper v1.4.0/go.mod h1:PTJ7Z/lr49W6bUbkmS1V3by4uWynFiR9p7+dSq/y
 github.com/spf13/viper v1.7.0/go.mod h1:8WkrPz2fc9jxqZNCJI/76HCieCp4Q8HaLFoCha5qpdg=
 github.com/spf13/viper v1.8.1/go.mod h1:o0Pch8wJ9BVSWGQMbra6iw0oQ5oktSIBaujf1rJH9Ns=
 github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf/go.mod h1:RJID2RhlZKId02nZ62WenDCkgHFerpIOmW0iT7GKmXM=
-github.com/stackhpc/gitops-engine v0.0.0-20230130171631-92eb90f3ca71 h1:oTUiRfYmkJMKHtnBxlNVAQ+bUATP7zmXa2R5tX3sMok=
-github.com/stackhpc/gitops-engine v0.0.0-20230130171631-92eb90f3ca71/go.mod h1:WpA/B7tgwfz+sdNE3LqrTrb7ArEY1FOPI2pAGI0hfPc=
+github.com/stackhpc/gitops-engine v0.0.0-20230201124431-8dd5d6d9739c h1:PYWAlsXmUmaWkysU8ERnQptkujGj18xBCv88rMS/pdE=
+github.com/stackhpc/gitops-engine v0.0.0-20230201124431-8dd5d6d9739c/go.mod h1:WpA/B7tgwfz+sdNE3LqrTrb7ArEY1FOPI2pAGI0hfPc=
 github.com/stoewer/go-strcase v1.2.0/go.mod h1:IBiWB2sKIp3wVVQ3Y035++gc+knqhUQag1KpM8ahLw8=
 github.com/storageos/go-api v2.2.0+incompatible/go.mod h1:ZrLn+e0ZuF3Y65PNF6dIwbJPZqfmtCXxFm9ckv0agOY=
 github.com/streadway/amqp v0.0.0-20190404075320-75d898a42a94/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
